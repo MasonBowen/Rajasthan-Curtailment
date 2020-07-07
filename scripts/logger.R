@@ -1,6 +1,6 @@
 # Logging files
 #create logging file with timestamp to append errors/warning messages to
-systime <- Sys.time()
+systime <- Sys.time() 
 
 # for errors with checking urls
 log_file_path <-  file.path(dir_base, "log", sprintf("logging_urls_%s.txt", format(systime, "%d%m%Y-%H%M%S")))
