@@ -1,6 +1,9 @@
 pacman::p_load(data.table, tabulizer, lubridate, RCurl)
 setwd("C:/Users/tbowen/Desktop")
 
+
+x <- 1
+
 dir_base <- "temp_sldc_pdfs"
 url_base <- "https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=%s-%s_RE+CURTAILMENT+FOR+DT.+%s&rep_name=%s-%s_RE+CURTAILMENT+FOR+DT.+%s&rep_type=monthly"
 
