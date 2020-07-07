@@ -1,0 +1,10 @@
+File created to capture missing data
+File created on: 2020-07-06 17:37:17
+Dates with missing data: 
+06052020
+10052020
+13052020
+18052020
+28052020
+30052020
+31052020

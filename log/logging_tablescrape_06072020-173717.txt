@@ -1,0 +1,102 @@
+File created to capture warning/error messages with scraping tables
+File created on: 2020-07-06 17:37:17
+
+Results for pdf file '2020-05-01':
+Successfully saved csv
+
+Results for pdf file '2020-05-02':
+Successfully saved csv
+
+Results for pdf file '2020-05-03':
+Successfully saved csv
+
+Results for pdf file '2020-05-04':
+Successfully saved csv
+
+Results for pdf file '2020-05-05':
+Successfully saved csv
+
+Results for pdf file '2020-05-06':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-07':
+Successfully saved csv
+
+Results for pdf file '2020-05-08':
+Successfully saved csv
+
+Results for pdf file '2020-05-09':
+Successfully saved csv
+
+Results for pdf file '2020-05-10':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-11':
+Successfully saved csv
+
+Results for pdf file '2020-05-12':
+Successfully saved csv
+
+Results for pdf file '2020-05-13':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-14':
+Successfully saved csv
+
+Results for pdf file '2020-05-15':
+Successfully saved csv
+
+Results for pdf file '2020-05-16':
+Successfully saved csv
+
+Results for pdf file '2020-05-17':
+Successfully saved csv
+
+Results for pdf file '2020-05-18':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-19':
+Successfully saved csv
+
+Results for pdf file '2020-05-20':
+Successfully saved csv
+
+Results for pdf file '2020-05-21':
+Successfully saved csv
+
+Results for pdf file '2020-05-22':
+Successfully saved csv
+
+Results for pdf file '2020-05-23':
+Successfully saved csv
+
+Results for pdf file '2020-05-24':
+Successfully saved csv
+
+Results for pdf file '2020-05-25':
+Successfully saved csv
+
+Results for pdf file '2020-05-26':
+Successfully saved csv
+
+Results for pdf file '2020-05-27':
+Successfully saved csv
+
+Results for pdf file '2020-05-28':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-29':
+Successfully saved csv
+
+Results for pdf file '2020-05-30':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+
+
+Results for pdf file '2020-05-31':
+Error in if (grepl("^http.*://", path)) {: argument is of length zero
+

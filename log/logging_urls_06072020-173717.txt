@@ -1,0 +1,95 @@
+File created to capture warning/error messages with teting urls
+File created on: 2020-07-06 17:37:17
+
+Results for urls for '01052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=01052020-01052020_RE+CURTAILMENT+FOR+DT.+01-05-220&rep_name=01052020-01052020_RE+CURTAILMENT+FOR+DT.+01-05-220&rep_type=monthly
+
+Results for urls for '02052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=02052020-02052020_RE+CURTAILMENT+FOR+DT.+02-05-20&rep_name=02052020-02052020_RE+CURTAILMENT+FOR+DT.+02-05-20&rep_type=monthly
+
+Results for urls for '03052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=03052020-03052020_RE+CURTAILMENT+FOR+DT.+03-05-20&rep_name=03052020-03052020_RE+CURTAILMENT+FOR+DT.+03-05-20&rep_type=monthly
+
+Results for urls for '04052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=04052020-04052020_RE+CURTAILMENT+FOR+DT.+04-05-20&rep_name=04052020-04052020_RE+CURTAILMENT+FOR+DT.+04-05-20&rep_type=monthly
+
+Results for urls for '05052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=05052020-05052020_RE+CURTAILMENT+FOR+DT.+05-05-20&rep_name=05052020-05052020_RE+CURTAILMENT+FOR+DT.+05-05-20&rep_type=monthly
+
+Results for urls for '06052020':
+
+
+Results for urls for '07052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=07052020-07052020_RE+CURTAILMENT+FOR+DT.+07-05-20&rep_name=07052020-07052020_RE+CURTAILMENT+FOR+DT.+07-05-20&rep_type=monthly
+
+Results for urls for '08052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=08052020-08052020_RE+CURTAILMENT+FOR+DT.+08-05-20&rep_name=08052020-08052020_RE+CURTAILMENT+FOR+DT.+08-05-20&rep_type=monthly
+
+Results for urls for '09052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=09052020-09052020_RE+CURTAILMENT+FOR+DT.+09-05-20&rep_name=09052020-09052020_RE+CURTAILMENT+FOR+DT.+09-05-20&rep_type=monthly
+
+Results for urls for '10052020':
+
+
+Results for urls for '11052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=11052020-11052020_RE+CURTAILMENT+FOR+DT.+11-05-20&rep_name=11052020-11052020_RE+CURTAILMENT+FOR+DT.+11-05-20&rep_type=monthly
+
+Results for urls for '12052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=12052020-12052020_RE+CURTAILMENT+FOR+DT.+12-05-20&rep_name=12052020-12052020_RE+CURTAILMENT+FOR+DT.+12-05-20&rep_type=monthly
+
+Results for urls for '13052020':
+
+
+Results for urls for '14052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=14052020-14052020_RE+CURTAILMENT+FOR+DT.+14-05-20&rep_name=14052020-14052020_RE+CURTAILMENT+FOR+DT.+14-05-20&rep_type=monthly
+
+Results for urls for '15052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=15052020-15052020_RE+CURTAILMENT+FOR+DT.+15-05-20&rep_name=15052020-15052020_RE+CURTAILMENT+FOR+DT.+15-05-20&rep_type=monthly
+
+Results for urls for '16052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=16052020-16052020_RE+CURTAILMENT+FOR+DT.+16-05-20&rep_name=16052020-16052020_RE+CURTAILMENT+FOR+DT.+16-05-20&rep_type=monthly
+
+Results for urls for '17052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=17052020-17052020_RE+CURTAILMENT+FOR+DT.+17-05-20&rep_name=17052020-17052020_RE+CURTAILMENT+FOR+DT.+17-05-20&rep_type=monthly
+
+Results for urls for '18052020':
+
+
+Results for urls for '19052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=19052020-19052020_RE+CURTAILMENT+FOR+DT.+19-05-20&rep_name=19052020-19052020_RE+CURTAILMENT+FOR+DT.+19-05-20&rep_type=monthly
+
+Results for urls for '20052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=20052020-20052020_RE+CURTAILMENT+FOR+DT.+20-05-20&rep_name=20052020-20052020_RE+CURTAILMENT+FOR+DT.+20-05-20&rep_type=monthly
+
+Results for urls for '21052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=21052020-21052020_RE+CURTAILMENT+FOR+DT.+21-05-20&rep_name=21052020-21052020_RE+CURTAILMENT+FOR+DT.+21-05-20&rep_type=monthly
+
+Results for urls for '22052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=22052020-22052020_RE+CURTAILMENT+FOR+DT.+22-05-20&rep_name=22052020-22052020_RE+CURTAILMENT+FOR+DT.+22-05-20&rep_type=monthly
+
+Results for urls for '23052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=23052020-23052020_RE+CURTAILMENT+FOR+DT.+23-05-20&rep_name=23052020-23052020_RE+CURTAILMENT+FOR+DT.+23-05-20&rep_type=monthly
+
+Results for urls for '24052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=24052020-24052020_RE+CURTAILMENT+FOR+DT.+24-05-20&rep_name=24052020-24052020_RE+CURTAILMENT+FOR+DT.+24-05-20&rep_type=monthly
+
+Results for urls for '25052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=25052020-25052020_RE+CURTAILMENT+FOR+DT.+25-05-20&rep_name=25052020-25052020_RE+CURTAILMENT+FOR+DT.+25-05-20&rep_type=monthly
+
+Results for urls for '26052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=26052020-26052020_RE+CURTAILMENT+FOR+DT.+26-05-20&rep_name=26052020-26052020_RE+CURTAILMENT+FOR+DT.+26-05-20&rep_type=monthly
+
+Results for urls for '27052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=27052020-27052020_RE+CURTAILMENT+FOR+DT.+27.05-20&rep_name=27052020-27052020_RE+CURTAILMENT+FOR+DT.+27.05-20&rep_type=monthly
+
+Results for urls for '28052020':
+
+
+Results for urls for '29052020':
+https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=29052020-29052020_RE+CURTAILMENT+FOR+DT.+29-05-20&rep_name=29052020-29052020_RE+CURTAILMENT+FOR+DT.+29-05-20&rep_type=monthly
+
+Results for urls for '30052020':
+
+
+Results for urls for '31052020':
+
