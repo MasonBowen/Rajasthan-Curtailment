@@ -1,18 +1,27 @@
 pacman::p_load(data.table, tabulizer, lubridate, RCurl)
-setwd("C:/Users/tbowen/Desktop")
+setwd("C:/Users/cwayner/Documents/")
 
+# Error 1 - no plus sign after DT (5/30/20, 5/6/20, 5/18/20, 5/31/20), corrected
+# Error 2 - 5/10/20 stored at 5/8/20 link, 5/8/20 link missing 3rd and 6th dates - MANUAL
+# Error 3 - 5/13/20 has 13-04-20 stored as its 3rd and 6th dates, corrected  
+# Error 4 - no data for 5/28/20
+# Error 5 - Y instead of y for 3rd and 6th dates, corrected
+# Error 6 - FOOR instead of FOR, 4/13/20, corrected
+# Error 7 - FOR is missing from URL, 4/22/20, corrected
+# Error 8 - 3/9/20 has O instead of 0 - MANUAL
+# Error 9 - 3/21/20 has 3/20/20 as 3rd and 6th dates, corrected
 
-x <- 1
+## Renewable curtailment data goes back to August 2019, don't check beyond there.
 
-dir_base <- "temp_sldc_pdfs"
-url_base <- "https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?reportReDsmTitles=%s-%s_RE+CURTAILMENT+FOR+DT.+%s&rep_name=%s-%s_RE+CURTAILMENT+FOR+DT.+%s&rep_type=monthly"
+dir_base <- "Rajasthan-Curtailment"
+url_base <- "https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?%s=%s-%s_RE+CURTAILMENT+%s%s&rep_name=%s-%s_RE+CURTAILMENT+%s%s&rep_type=monthly"
 
-source("temp_sldc_pdfs/scripts/url_check.R")
-source("temp_sldc_pdfs/scripts/logger.R")
-source("temp_sldc_pdfs/scripts/scraper_function.R")
-source("temp_sldc_pdfs/scripts/data_check.R")
+source("Rajasthan-Curtailment/scripts/url_check.R")
+source("Rajasthan-Curtailment/scripts/logger.R")
+source("Rajasthan-Curtailment/scripts/scraper_function.R")
+source("Rajasthan-Curtailment/scripts/data_check.R")
 
-dates_test <- seq(as.Date("2020-05-01"), as.Date("2020-05-31"), by="days")
+dates_test <- seq(as.Date("2019-12-01"), as.Date("2019-12-31"), by="days")
 
 # ------------------------------------------------------------ %
 # ~~~~~~~~~ Check urls are valid ~~~~~~~~~~~~~

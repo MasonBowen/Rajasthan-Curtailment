@@ -4,9 +4,9 @@ url_exists <- function(x, non_2xx_return_value = FALSE, quiet = FALSE,...) {
     require("httr", quietly = FALSE, warn.conflicts = FALSE)
   })
   
-  # you don't need thse two functions if you're alread using `purrr`
-  # but `purrr` is a heavyweight compiled pacakge that introduces
-  # many other "tidyverse" dependencies and this doesnt.
+  # you don't need these two functions if you're already using `purrr`
+  # but `purrr` is a heavyweight compiled package that introduces
+  # many other "tidyverse" dependencies and this doesn't
   
   capture_error <- function(code, otherwise = NULL, quiet = TRUE) {
     tryCatch(
@@ -60,20 +60,60 @@ url_selector <- function(date_str, ub = url_base, lfp = log_file_path, edfp = em
   d3 <- format(date_str, format = "%d.%m.%y")
   d4 <- format(date_str, format = "%d-%m-2%y")
   d5 <- format(date_str, format = "%d.%m-%y")
-
+  d6 <- format(date_str, format = "%d-%m-%Y")
+  d7 <- format(date_str - 1, format = "%d-%m-%y")
+  d8 <- format(date_str %m-% months(1), format = "%d-%m-%y")
   
-  url_list = list(t1 = sprintf(ub, d1, d1, d2, d1, d1, d2),
-                  t2 = sprintf(ub, d1, d1, d3, d1, d1, d3),
-                  t3 = sprintf(ub, d1, d1, d4, d1, d1, d4),
-                  t4 = sprintf(ub, d1, d1, d5, d1, d1, d5))
+  plus <- "FOR+DT.+"
+  noplus <- "FOR+DT."
+  nofor <- "DT.+"
+  nodot <- "FOR+DT+"
+  foor <- "FOOR+DT.+"
+  doubleplus <- "FOR++DT.+"
+  nodt <- "FOR+"
+  
+  # use newpre (prefix) for 2020-04-01 and after, otherwise use oldpre
+  newpre <- "reportReDsmTitles"
+  oldpre <- "weeklydsm"
+
+
+  if (date_str > as.Date("2020-03-31")) {
+    url_list = list(t1 = sprintf(ub, newpre, d1, d1, plus, d2, d1, d1, plus, d2),
+                    t2 = sprintf(ub, newpre, d1, d1, plus, d3, d1, d1, plus, d3),
+                    t3 = sprintf(ub, newpre, d1, d1, plus, d4, d1, d1, plus, d4),
+                    t4 = sprintf(ub, newpre, d1, d1, plus, d5, d1, d1, plus, d5),
+                    t5 = sprintf(ub, newpre, d1, d1, plus, d6, d1, d1, plus, d6),
+                    t6 = sprintf(ub, newpre, d1, d1, noplus, d2, d1, d1, noplus, d2),
+                    t7 = sprintf(ub, newpre, d1, d1, nofor, d2, d1, d1, nofor, d2),
+                    t8 = sprintf(ub, newpre, d1, d1, foor, d2, d1, d1, foor, d2),
+                    t9 = sprintf(ub, newpre, d1, d1, plus, d7, d1, d1, plus, d7),
+                    t10 = sprintf(ub, newpre, d1, d1, plus, d8, d1, d1, plus, d8),
+                    t11 = sprintf(ub, newpre, d1, d1, doubleplus, d2, d1, d1, doubleplus, d2),
+                    t12 = sprintf(ub, newpre, d1, d1, nodot, d2, d1, d1, nodot, d2), 
+                    t13 = sprintf(ub, newpre, d1, d1, nodt, d2, d1, d1, nodt, d2)) 
+  } else {
+    url_list = list(t1 = sprintf(ub, oldpre, d1, d1, plus, d2, d1, d1, plus, d2),
+                    t2 = sprintf(ub, oldpre, d1, d1, plus, d3, d1, d1, plus, d3),
+                    t3 = sprintf(ub, oldpre, d1, d1, plus, d4, d1, d1, plus, d4),
+                    t4 = sprintf(ub, oldpre, d1, d1, plus, d5, d1, d1, plus, d5),
+                    t5 = sprintf(ub, oldpre, d1, d1, plus, d6, d1, d1, plus, d6),
+                    t6 = sprintf(ub, oldpre, d1, d1, noplus, d2, d1, d1, noplus, d2),
+                    t7 = sprintf(ub, oldpre, d1, d1, nofor, d2, d1, d1, nofor, d2),
+                    t8 = sprintf(ub, oldpre, d1, d1, foor, d2, d1, d1, foor, d2),
+                    t9 = sprintf(ub, oldpre, d1, d1, plus, d7, d1, d1, plus, d7),
+                    t10 = sprintf(ub, oldpre, d1, d1, plus, d8, d1, d1, plus, d8),
+                    t11 = sprintf(ub, oldpre, d1, d1, doubleplus, d2, d1, d1, doubleplus, d2),
+                    t12 = sprintf(ub, oldpre, d1, d1, nodot, d2, d1, d1, nodot, d2), # for Jan 1-19, 2020
+                    t13 = sprintf(ub, newpre, d1, d1, nodt, d2, d1, d1, nodt, d2)) # for Dec 1-4, 2019
+  }
   
   #most common, check first before iterating since it is cumbersome/slow
-  result = url_exists(url_list[['t1']],non_2xx_return_value = NA, quiet = TRUE)
+  result = url_exists(url_list[['t1']],non_2xx_return_value = NA, quiet = TRUE)  
   
   if(is.na(result)){
     
     result = tryCatch({
-      lapply(url_list[c("t2","t3", "t4")], function(x){url_exists(x,non_2xx_return_value = NA, quiet = TRUE)})
+      lapply(url_list[c("t2","t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10", "t11", "t12", "t13")], function(x){url_exists(x,non_2xx_return_value = NA, quiet = TRUE)})
     }, warning = function(w2) {
       message(sprintf("URLs for %s produced warning!", d1))
       message("Here's the original warning message:")
