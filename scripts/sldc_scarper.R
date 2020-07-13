@@ -14,14 +14,16 @@ setwd("C:/Users/cwayner/Documents/")
 ## Renewable curtailment data goes back to August 2019, don't check beyond there.
 
 dir_base <- "Rajasthan-Curtailment"
-url_base <- "https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?%s=%s-%s_RE+CURTAILMENT+%s%s&rep_name=%s-%s_RE+CURTAILMENT+%s%s&rep_type=monthly"
+
+# prefix, date 1, date 1, letters in between, date 2, repeat!
+url_base <- "https://sldc.rajasthan.gov.in/mis/getReDsmReportForTitle?%s=%s-%s%s%s&rep_name=%s-%s%s%s&rep_type=monthly"
 
 source("Rajasthan-Curtailment/scripts/url_check.R")
 source("Rajasthan-Curtailment/scripts/logger.R")
 source("Rajasthan-Curtailment/scripts/scraper_function.R")
 source("Rajasthan-Curtailment/scripts/data_check.R")
 
-dates_test <- seq(as.Date("2019-12-01"), as.Date("2019-12-31"), by="days")
+dates_test <- seq(as.Date("2019-08-06"), as.Date("2019-08-19"), by="days")
 
 # ------------------------------------------------------------ %
 # ~~~~~~~~~ Check urls are valid ~~~~~~~~~~~~~

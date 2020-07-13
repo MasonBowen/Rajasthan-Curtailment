@@ -63,14 +63,19 @@ url_selector <- function(date_str, ub = url_base, lfp = log_file_path, edfp = em
   d6 <- format(date_str, format = "%d-%m-%Y")
   d7 <- format(date_str - 1, format = "%d-%m-%y")
   d8 <- format(date_str %m-% months(1), format = "%d-%m-%y")
+  d9 <- format(date_str, format = "%d-%m-%y+")
   
-  plus <- "FOR+DT.+"
-  noplus <- "FOR+DT."
-  nofor <- "DT.+"
-  nodot <- "FOR+DT+"
-  foor <- "FOOR+DT.+"
-  doubleplus <- "FOR++DT.+"
-  nodt <- "FOR+"
+  plus <- "_RE+CURTAILMENT+FOR+DT.+"
+  noplus <- "_RE+CURTAILMENT+FOR+DT."
+  nofor <- "_RE+CURTAILMENT+DT.+"
+  nodot <- "_RE+CURTAILMENT+FOR+DT+"
+  foor <- "_RE+CURTAILMENT+FOOR+DT.+"
+  doubleplus <- "_RE+CURTAILMENT+FOR++DT.+"
+  nodt <- "_RE+CURTAILMENT+FOR+"
+  empty <- ""
+  dated <- "_RE+CURTAILMENT+for+dated+"
+  DATED <- "_RE+CURTAILMENT+FOR+DATED+"
+  
   
   # use newpre (prefix) for 2020-04-01 and after, otherwise use oldpre
   newpre <- "reportReDsmTitles"
@@ -89,8 +94,11 @@ url_selector <- function(date_str, ub = url_base, lfp = log_file_path, edfp = em
                     t9 = sprintf(ub, newpre, d1, d1, plus, d7, d1, d1, plus, d7),
                     t10 = sprintf(ub, newpre, d1, d1, plus, d8, d1, d1, plus, d8),
                     t11 = sprintf(ub, newpre, d1, d1, doubleplus, d2, d1, d1, doubleplus, d2),
-                    t12 = sprintf(ub, newpre, d1, d1, nodot, d2, d1, d1, nodot, d2), 
-                    t13 = sprintf(ub, newpre, d1, d1, nodt, d2, d1, d1, nodt, d2)) 
+                    t12 = sprintf(ub, newpre, d1, d1, nodot, d2, d1, d1, nodot, d2),
+                    t13 = sprintf(ub, newpre, d1, d1, nodt, d9, d1, d1, nodt, d9),
+                    t14 = sprintf(ub, newpre, d1, d1, empty, empty, d1, d1, empty, empty),
+                    t15 = sprintf(ub, newpre, d1, d1, dated, d2, d1, d1, dated, d2),
+                    t16 = sprintf(ub, newpre, d1, d1, DATED, d2, d1, d1, DATED, d2)) 
   } else {
     url_list = list(t1 = sprintf(ub, oldpre, d1, d1, plus, d2, d1, d1, plus, d2),
                     t2 = sprintf(ub, oldpre, d1, d1, plus, d3, d1, d1, plus, d3),
@@ -103,8 +111,11 @@ url_selector <- function(date_str, ub = url_base, lfp = log_file_path, edfp = em
                     t9 = sprintf(ub, oldpre, d1, d1, plus, d7, d1, d1, plus, d7),
                     t10 = sprintf(ub, oldpre, d1, d1, plus, d8, d1, d1, plus, d8),
                     t11 = sprintf(ub, oldpre, d1, d1, doubleplus, d2, d1, d1, doubleplus, d2),
-                    t12 = sprintf(ub, oldpre, d1, d1, nodot, d2, d1, d1, nodot, d2), # for Jan 1-19, 2020
-                    t13 = sprintf(ub, newpre, d1, d1, nodt, d2, d1, d1, nodt, d2)) # for Dec 1-4, 2019
+                    t12 = sprintf(ub, oldpre, d1, d1, nodot, d2, d1, d1, nodot, d2),
+                    t13 = sprintf(ub, oldpre, d1, d1, nodt, d9, d1, d1, nodt, d9),
+                    t14 = sprintf(ub, oldpre, d1, d1, empty, empty, d1, d1, empty, empty),
+                    t15 = sprintf(ub, oldpre, d1, d1, dated, d2, d1, d1, dated, d2),
+                    t16 = sprintf(ub, oldpre, d1, d1, DATED, d2, d1, d1, DATED, d2))
   }
   
   #most common, check first before iterating since it is cumbersome/slow
@@ -113,7 +124,8 @@ url_selector <- function(date_str, ub = url_base, lfp = log_file_path, edfp = em
   if(is.na(result)){
     
     result = tryCatch({
-      lapply(url_list[c("t2","t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10", "t11", "t12", "t13")], function(x){url_exists(x,non_2xx_return_value = NA, quiet = TRUE)})
+      lapply(url_list[c("t2","t3", "t4", "t5", "t6", "t7", "t8", "t9", "t10", "t11", "t12", "t13", "t14", "t15", "t16")], 
+             function(x){url_exists(x,non_2xx_return_value = NA, quiet = TRUE)})
     }, warning = function(w2) {
       message(sprintf("URLs for %s produced warning!", d1))
       message("Here's the original warning message:")
